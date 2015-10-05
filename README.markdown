@@ -122,7 +122,11 @@ I referred
 
 and then ran following to reduce size of vm:
 
-	remove temp files  
+	# remove traces of network mac address
+	sed -i /HWADDR/d /etc/sysconfig/network-scripts/ifcfg-eth0
+	rm -f /etc/udev/rules.d/70-persistent-net.rules
+	rm -f /etc/sysconfig/network-scripts/ifcfg-eth1
+	# remove temp files  
 	sudo yum clean all  
 	sudo rm -rf /tmp/*  
 	sudo rm -f /var/log/wtmp /var/log/btmp  
