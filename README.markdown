@@ -123,9 +123,9 @@ I referred
 and then ran following to reduce size of vm:
 
 	# remove traces of network mac address
-	sed -i /HWADDR/d /etc/sysconfig/network-scripts/ifcfg-eth0
-	rm -f /etc/udev/rules.d/70-persistent-net.rules
-	rm -f /etc/sysconfig/network-scripts/ifcfg-eth1
+	sudo sed -i /HWADDR/d /etc/sysconfig/network-scripts/ifcfg-eth0
+	sudo rm -f /etc/udev/rules.d/70-persistent-net.rules
+	sudo rm -f /etc/sysconfig/network-scripts/ifcfg-eth1
 	# remove temp files  
 	sudo yum clean all  
 	sudo rm -rf /tmp/*  
@@ -136,8 +136,8 @@ and then ran following to reduce size of vm:
 
 Now actual repackage to new box 
 
-	vagrant package --output toohey-centos65.box  
-	vagrant box add toohey-centos65 toohey-centos65.box  
+	vagrant package --output releases/toohey-centos65.box  
+	vagrant box add toohey-centos65 releases/toohey-centos65.box  
 
 Followed by:
 
