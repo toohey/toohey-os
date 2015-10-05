@@ -1,6 +1,9 @@
 
-#project specific
-releases/
+#project specific (only if needed)
+
+
+#vagrant specific
+.vagrant/
 
 # Mac-OS specific
 

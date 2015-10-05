@@ -7,7 +7,8 @@ This repository will contain releases of operating system that act as the starti
 
 # Usage
 Download a specific release binary and use it. In terminal window, run
-vagrant box add --name toohey-centos65 ADDRESS
+
+	vagrant box add --name toohey-centos65 ADDRESS
 
 # Licence
 Each release licenced may be licenced under a different release
